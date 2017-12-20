@@ -27,11 +27,12 @@ class Insert extends Component {
       <div className="Insert">
         <input type='text' onChange={(e)=>this.setState({name:e.target.value, mail:this.state.mail})}/>
         <input type='text' onChange={(e)=>this.setState({name:this.state.name, mail:e.target.value})}/>
-        <input type='button' onClick={(e)=>insert(this.state, router.navigate(routes.root))}/>
+        <input type='button' onClick={(e)=>insert(this.state, router.navigate(routes.app))}/>
       </div>
     );
   }
 
 }
 
-export default Insert;
+//export default Insert;
+export default routeNode('app.insert')(Insert);
